@@ -3,49 +3,55 @@ import React from "react";
 const Index = () => {
   return (
     <div
-      className="min-h-screen font-roboto text-white text-center"
+      className="min-h-screen text-white"
       style={{
-        background: "linear-gradient(135deg, #0f0f0f, #1a1a1a)",
+        background: "linear-gradient(135deg, #0c0c0c 0%, #1a1a1a 100%)",
+        fontFamily: "Roboto, sans-serif",
       }}
     >
       {/* Header */}
-      <header
-        className="py-16 px-5"
-        style={{
-          background: "linear-gradient(135deg, #121212, #1f1f1f)",
-          boxShadow: "0 4px 10px rgba(0,0,0,0.5)",
-        }}
-      >
-        <h1
-          className="text-5xl font-bold mb-3"
-          style={{
-            color: "#00ffff",
-            textShadow: "0 0 8px rgba(0, 255, 255, 0.33)",
-          }}
-        >
+      <header className="py-8 px-5 text-center">
+        <h1 className="text-5xl font-bold mb-3" style={{ color: "#00ffee" }}>
           Beka Zhutakeev
         </h1>
-        <p className="text-xl text-gray-300">Музыка — моя душа</p>
+        <p className="text-xl text-gray-300">Bekaxs</p>
       </header>
 
-      {/* Spotify Section */}
-      <section className="py-10 px-5">
+      {/* About Section */}
+      <section className="py-10 px-5 text-center">
         <h2 className="text-3xl font-bold mb-5" style={{ color: "#00ffee" }}>
-          Слушай мою песню
+          Обо мне
         </h2>
+        <p className="text-lg text-gray-300 max-w-2xl mx-auto leading-relaxed">
+          Привет! Меня зовут Бека Жутакеев, и я известен под псевдонимом Bekaxs.
+          Я увлечен музыкой, технологиями и творчеством. Здесь вы можете найти
+          мою музыку и связаться со мной через различные платформы.
+        </p>
+      </section>
+
+      {/* Spotify Section */}
+      <section className="py-10 px-5 text-center">
+        <h2 className="text-3xl font-bold mb-5" style={{ color: "#00ffee" }}>
+          Моя музыка
+        </h2>
+        <p className="text-lg text-gray-300 mb-6">
+          Слушайте мои треки на Spotify
+        </p>
         <a
-          href="https://open.spotify.com/track/5Z7HoDraUhnW4kGqscZs2F?si=mJy8els0QaOENYvg37nC4w"
+          href="https://open.spotify.com/artist/1234567890"
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-block mt-5 py-3 px-6 text-white font-medium rounded-full text-lg transition-all duration-300 hover:scale-105"
+          className="inline-block px-8 py-4 rounded-xl text-lg font-semibold transition-all duration-300 hover:scale-105"
           style={{
-            backgroundColor: "#1DB954",
+            background: "#1db954",
+            color: "white",
+            boxShadow: "0 0 20px rgba(29, 185, 84, 0.3)",
           }}
           onMouseEnter={(e) => {
-            e.target.style.backgroundColor = "#1ed760";
+            e.target.style.boxShadow = "0 0 30px rgba(29, 185, 84, 0.5)";
           }}
           onMouseLeave={(e) => {
-            e.target.style.backgroundColor = "#1DB954";
+            e.target.style.boxShadow = "0 0 20px rgba(29, 185, 84, 0.3)";
           }}
         >
           Открыть в Spotify
@@ -54,7 +60,10 @@ const Index = () => {
 
       {/* Contacts Section */}
       <section className="py-10 px-5">
-        <h2 className="text-3xl font-bold mb-5" style={{ color: "#00ffee" }}>
+        <h2
+          className="text-3xl font-bold mb-5 text-center"
+          style={{ color: "#00ffee" }}
+        >
           Контакты
         </h2>
         <div className="flex flex-col items-center gap-4 max-w-md mx-auto">
@@ -88,12 +97,14 @@ const Index = () => {
                 boxShadow: "0 0 10px rgba(0, 255, 255, 0.13)",
               }}
               onMouseEnter={(e) => {
-                e.target.style.background = "#333";
-                e.target.style.boxShadow = "0 0 16px rgba(0, 255, 255, 0.27)";
+                e.currentTarget.style.background = "#333";
+                e.currentTarget.style.boxShadow =
+                  "0 0 16px rgba(0, 255, 255, 0.27)";
               }}
               onMouseLeave={(e) => {
-                e.target.style.background = "#222";
-                e.target.style.boxShadow = "0 0 10px rgba(0, 255, 255, 0.13)";
+                e.currentTarget.style.background = "#222";
+                e.currentTarget.style.boxShadow =
+                  "0 0 10px rgba(0, 255, 255, 0.13)";
               }}
             >
               <span className="text-gray-300">{contact.label}: </span>
@@ -108,10 +119,10 @@ const Index = () => {
                 className="text-lg transition-all duration-300"
                 style={{ color: "#00ffff" }}
                 onMouseEnter={(e) => {
-                  e.target.style.textDecoration = "underline";
+                  e.currentTarget.style.textDecoration = "underline";
                 }}
                 onMouseLeave={(e) => {
-                  e.target.style.textDecoration = "none";
+                  e.currentTarget.style.textDecoration = "none";
                 }}
               >
                 {contact.value}
@@ -123,7 +134,7 @@ const Index = () => {
 
       {/* Footer */}
       <footer
-        className="py-8 px-3 text-sm mt-10"
+        className="py-8 px-3 text-sm mt-10 text-center"
         style={{
           color: "#888",
           borderTop: "1px solid #333",
