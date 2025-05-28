@@ -12,20 +12,11 @@ const Index = () => {
       {/* Header */}
       <header className="py-8 px-5 text-center">
         <h1 className="text-5xl font-bold mb-3" style={{ color: "#00ffee" }}>
-          Beka Zhutakeev
+          Beka Zhutakeev (Bekaxs)
         </h1>
-        <p className="text-xl text-gray-300">Bekaxs</p>
-      </header>
-
-      {/* About Section */}
-      <section className="py-10 px-5 text-center">
-        <h2 className="text-3xl font-bold mb-5" style={{ color: "#00ffee" }}>
-          Обо мне
-        </h2>
-        <p className="text-lg text-gray-300 max-w-2xl mx-auto leading-relaxed">
-          Привет! Меня зовут Бека Жутакеев, и я известен под псевдонимом Bekaxs.
-          Я увлечен музыкой, технологиями и творчеством. Здесь вы можете найти
-          мою музыку и связаться со мной через различные платформы.
+        <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
+          Я начинающий артист и автор песен. Музыка — это мой способ выражать чувства и мечты.
+          Моя первая песня называется <strong>"Снова один"</strong>, и я сам её написал и исполнил.
         </p>
       </section>
 
